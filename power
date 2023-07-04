@@ -1,0 +1,11 @@
+def power(base,exp):
+    assert exp>=0 and base==int(base) , "enter in integer"
+    if (exp==0 and base!=0):
+        return 1
+    elif(base==0):
+        return 0    
+    else :
+        return base * power(base,exp-1)
+n=int(input("enter the base of the power"))
+m=int(input("enter the exponential of the power"))
+print("the ",n,"raise to power", m, "is",power(n,m))
